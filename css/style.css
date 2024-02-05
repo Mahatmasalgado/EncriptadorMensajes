@@ -1,0 +1,129 @@
+:root{
+    --fondo_principal: #F3F5FC;
+    --blanco: #FFFFFF;
+    --color-texto: #0A3871;
+    --gris: #495057;
+}
+
+body{
+    background-color: var(--fondo_principal); /* color de todo el contenedor */
+}
+
+.logo{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.contenedorEntrada{
+    margin-top: calc(168px - 48px);
+    margin-left: 240px;
+}
+
+.contenedorEntrada textarea{
+    resize: none;
+    background-color: var(--fondo_principal);
+    width: 577px;
+    border: none;
+    outline: none;
+    color: var(--color-texto);
+}
+.contenedorEntrada textarea, .contenedorEntrada textarea::placeholder{
+    color: var(--color-texto);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.botonesPrincipales{
+    position: absolute;
+    bottom: 10%;
+    margin-left: calc(40% - 400px);
+}
+
+.legendaBotones{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    opacity: 80%;
+    color: var(--gris);
+
+    margin-bottom: 1rem;
+}
+
+.botones{
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    margin-right: 8px;
+    border: 2px solid var(--color-texto);
+    background-color: var(--fondo_principal);
+}
+
+.botones:first-of-type{
+    background-color: var(--color-texto);
+    color: var(--blanco);
+}
+
+.slide-bar{
+    position: absolute;
+    top: calc(0% + 40px );
+    left: calc(100% - 420px);
+
+    background-color: var(--blanco);
+
+    height: 90%;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.slide-bar img{
+    padding-top: 35%;
+}
+
+@media (max-width: 1200px){
+    .slide-bar{
+        margin-top: 1rem;
+        position: static;
+        display: flex;
+
+    }
+    .slide-bar img{
+        width: 200px;
+        padding-top: 0;
+    }
+    .botonesPrincipales{
+        position: static;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .botonesPrincipales .legendaBotones{
+        justify-content: center;
+    }
+    .contenedorEntrada{
+        margin-top: calc(168px - 48px);
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 700px){
+    .contenedorEntrada{
+        margin-left: 5%;
+    }
+    .contenedorEntrada textarea, .contenedorEntrada textarea::placeholder{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    .contenedorEntrada textarea{
+        width: 100%;
+    }
+    .botones{
+        margin-bottom: 15px;
+    }
+    .slide-bar{
+        margin-top: 1rem;
+    }
+}
