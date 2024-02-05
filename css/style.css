@@ -83,7 +83,7 @@ body{
     padding-top: 35%;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1000px){
     .slide-bar{
         margin-top: 1rem;
         position: static;
@@ -108,7 +108,7 @@ body{
     }
 }
 
-@media (max-width: 700px){
+@media (max-width: 756px){
     .contenedorEntrada{
         margin-left: 5%;
     }
