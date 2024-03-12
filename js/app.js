@@ -51,7 +51,6 @@ function encriptar() {
     }
     document.querySelector(".--ocultar").style.display = "unset";
     document.getElementById("textarea-codificado").innerHTML = contText;
-    
 }
 
 function desencriptar(){
@@ -77,4 +76,14 @@ function desencriptar(){
     document.querySelector(".--ocultar").style.display = "unset";
     document.getElementById("textarea-codificado").innerHTML = contText;
 
+}
+
+function portapapeles(){
+    const area = document.getElementById("textarea-codificado").innerHTML;
+
+    navigator.clipboard.writeText(area)
+        .then(()=>{alert("El texto se copio correctamente")})
+        .catch(err => {
+            alert("Algo salió mal, no se pudo copiar en el portapapeles")
+        })
 }

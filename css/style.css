@@ -21,7 +21,7 @@ body{
 .contenedorEntrada textarea{
     resize: none;
     background-color: var(--fondo_principal);
-    width: 577px;
+    width: 60%;
     border: none;
     outline: none;
     color: var(--color-texto);
@@ -78,19 +78,33 @@ body{
     width: 336px;
     border-radius: 32px;
     text-align: center;
+    padding-top: 3rem;
 }
 
 .--ocultar{
     display: none;
+    margin-top: 1rem;
 }
 
 #textarea-codificado{
     max-width: 96%;
-    margin: 0 auto;
+    margin: auto auto;
     color: var(--color-texto);
     font-size: 30px;
     font-weight: 400;
     line-height: 40px;
+}
+
+.boton-copy{
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.boton-copy button{
+    border: 1px solid var(--color-texto);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    font-size:medium;
 }
 
 .slide-bar img{
@@ -99,6 +113,12 @@ body{
 
 .slide-bar__texto{
     margin: 0 10%;
+}
+
+@media (max-width: 1200px){
+    .contenedorEntrada textarea{
+        width: 50%;
+    }
 }
 
 @media (max-width: 1100px){
@@ -124,6 +144,9 @@ body{
     .contenedorEntrada{
         margin-top: calc(168px - 48px);
         margin-left: 15%;
+    }
+    .contenedorEntrada textarea{
+        width: 90%;
     }
 }
 
